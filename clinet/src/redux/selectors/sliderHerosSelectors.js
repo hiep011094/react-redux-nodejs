@@ -1,0 +1,1 @@
+export const sliderHerosState$ = (state) => state.sliderHerosReducers.data

@@ -1,0 +1,208 @@
+.c-gnavi {
+    @include sp(768px) {
+        position: absolute;
+        width: 100%;
+        background: rgba(108, 40, 1, 0.8);
+        top: 67px;
+        width: 280px;
+        transform: translateX(100%);
+        right: 0;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    > ul {
+        display: flex;
+        @include sp(768px) {
+            display: block;
+        }
+        a {
+            display: block;
+            width: 100%;
+            @include sp(999px) {
+                font-size: 1.4rem;
+            }
+            &:hover {
+                color: $txt-second-cl;
+            }
+        }
+        > li {
+            display: block;
+            @include sp(768px) {
+                border-top: 1px solid #fff;
+            }
+            a {
+                padding: 20px;
+                @include sp(999px) {
+                    padding: 15px;
+                }
+            }
+        }
+        > li.active {
+            > a {
+                color: $txt-second-cl;
+            }
+        }
+        .over {
+            position: relative;
+            z-index: 1;
+            @include sp(768px) {
+                cursor: pointer;
+                &::after {
+                    content: ">";
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform: rotate(90deg);
+                    font-family: "Lato", sans-serif;
+                    height: 53px;
+                    width: 53px;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &:hover {
+                    color: $txt-second-cl;
+                }
+            }
+            > a {
+                padding-right: 25px;
+                position: relative;
+                z-index: 1;
+                @include sp(999px) {
+                    padding-right: 20px;
+                }
+                @include sp(768px) {
+                    width: calc(100% - 50px);
+                }
+                &::after {
+                    content: ">";
+                    position: absolute;
+                    right: 5px;
+                    top: calc(50% + 2px);
+                    transform: translateY(-50%) rotate(90deg);
+                    font-family: "Lato", sans-serif;
+                    @include sp(999px) {
+                        top: calc(50% + 1px);
+                    }
+                    @include sp(768px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &__sub {
+        transition: 0.5s ease;
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 50px;
+        width: 250px;
+        padding: 31px 0 0 0;
+        @include sp(768px) {
+            position: relative;
+            padding: 0;
+            top: 0;
+            width: 100%;
+            visibility: visible;
+        }
+        li {
+            text-align: center;
+            background: rgba(206, 105, 47, 0.7);
+            a {
+                font-size: 1.4rem;
+                padding: 8px;
+                border-top: 1px solid #fff;
+                &:hover {
+                    background: #dd9f05;
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+    ul > li:last-child &__sub {
+        right: -40px;
+        left: auto;
+        transform: none;
+        @include sp(768px) {
+            right: 0;
+        }
+    }
+    &__sub.active {
+        height: 100%;
+        visibility: visible;
+        @include sp(768px) {
+        }
+    }
+}
+.c-gnavi.active {
+    @include sp(768px) {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.c-menutoggle {
+    display: none;
+}
+@include sp(768px) {
+    .c-menutoggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35px;
+        height: 30px;
+        z-index: 100;
+        transition: 0.5s;
+        &:hover {
+            opacity: 0.8;
+        }
+        span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: #fff;
+            position: relative;
+            margin-top: 3px;
+            transition: 0.5s;
+            &::after {
+                content: "";
+                width: 50%;
+                height: 3px;
+                background: #fff;
+                position: absolute;
+                right: 0;
+                top: 20px;
+                transition: 0.5s;
+            }
+            &::before {
+                content: "";
+                width: 75%;
+                height: 3px;
+                background: #fff;
+                position: absolute;
+                right: 0;
+                top: 10px;
+                transition: 0.5s;
+            }
+        }
+    }
+    .c-menutoggle.active {
+        span {
+            transform: rotate(45deg) translate(8px, 7px);
+            &::before {
+                display: none;
+            }
+            &::after {
+                width: 100%;
+                transform: rotate(-90deg) translate(20px, 0px);
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export const socialsState$ = (state) => state.socialsReducers.data;

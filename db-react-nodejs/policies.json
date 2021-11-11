@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "618c9d745ab48ffdcb920f6b"
+  },
+  "name": "Miễn phí giao hàng",
+  "description": "Miễn phí ship với đơn hàng > 239K",
+  "icon": "faShoppingBag",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-11-11T04:35:00.039Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-11T04:35:00.039Z"
+  }
+},{
+  "_id": {
+    "$oid": "618c9d745ab48ffdcb920f6c"
+  },
+  "name": "Thanh toán COD",
+  "description": "Thanh toán khi nhận hàng (COD)",
+  "icon": "faMoneyCheck",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-11-11T04:35:00.040Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-11T04:35:00.040Z"
+  }
+},{
+  "_id": {
+    "$oid": "618c9d745ab48ffdcb920f6d"
+  },
+  "name": "Khách hàng VIP",
+  "description": "Ưu đãi dành cho khách hàng VIP",
+  "icon": "faGem",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-11-11T04:35:00.040Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-11T04:35:00.040Z"
+  }
+},{
+  "_id": {
+    "$oid": "618c9d745ab48ffdcb920f6e"
+  },
+  "name": "Hỗ trợ bảo hành",
+  "description": "Đổi, sửa đồ tại tất cả store",
+  "icon": "faHandHoldingUsd",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-11-11T04:35:00.040Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-11T04:35:00.040Z"
+  }
+}]

@@ -1,0 +1,1 @@
+export const policiesState$ = (state) => state.policiesReducers.data;
