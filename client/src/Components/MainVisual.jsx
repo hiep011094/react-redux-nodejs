@@ -1,18 +1,17 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const MainVisual = (props) => {
-  const [dataMv] = props.data;
+const MainVisual = ({data}) => {  
+
   return (
     <div className="c-mainvisual">
       <div className="l-container c-mainvisual__inner">
-        <h2 className="c-ttl">{dataMv.title}</h2>
-        <p>{dataMv.decription}</p>
+        <h2 className="c-ttl">{data&&data.title}</h2>
+        <p>{data&&data.decription}</p>
       </div>
 
       <div className="c-videomv">
         <video
-          src={dataMv.video}
+          src={data&&data.video}
           controls={true}
           type="video/mp4"
           loop
@@ -24,8 +23,5 @@ const MainVisual = (props) => {
   );
 };
 
-MainVisual.propTypes = {
-  data: PropTypes.array.isRequired,
-};
 
 export default MainVisual;

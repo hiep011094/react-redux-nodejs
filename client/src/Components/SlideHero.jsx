@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";

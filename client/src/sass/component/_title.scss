@@ -8,13 +8,14 @@
         font-size: 3.4rem;
     }
 }
+
 .c-ttl01 {
     font-size: 3.8rem;
     text-align: center;
     font-weight: 700;
     font-family: "Pacifico", cursive;
     margin-bottom: 20px;
-    color: rgba(206, 105, 47, 0.8);
+    color: $cl02-op-08;
     @include sp(999px) {
         font-size: 2.6rem;
     }
@@ -26,7 +27,7 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     transition: 0.5s;
-    color: #fff;
+    color: $clw;
     @include sp(999px) {
         font-size: 1rem;
     }

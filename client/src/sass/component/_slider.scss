@@ -20,7 +20,7 @@
         }
         .c-ttl01 {
             text-align: left;
-            color: #6b2800;
+            color: $cl01;
             font-size: 6rem;
             margin-bottom: 3vh;
             @include sp(999px) {
@@ -53,7 +53,7 @@
         }
         .shape {
             max-width: 100%;
-            background: #6b2800;
+            background: $cl01;
             height: 472px;
             width: 472px;
             position: absolute;
@@ -121,6 +121,7 @@
         opacity: 1;
     }
 }
+
 @keyframes animation-img {
     0% {
         transform: scale(0) rotate(65deg);

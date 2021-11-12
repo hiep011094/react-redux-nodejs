@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 const Helmet = (props) => {
   document.title = "Xi Store - " + props.title;
-  console.log(props.title);
 
   return <div>{props.children}</div>;
 };

@@ -2,8 +2,8 @@
     position: relative;
     padding: 50px 0 0 0;
     width: 100%;
-    background: #301c0d;
-    color: #fff;
+    background: $cl;
+    color: $clw;
     font-size: 15px;
     line-height: 1.4;
     @include sp(768px) {
@@ -23,7 +23,7 @@
             content: "";
             width: 30px;
             height: 2px;
-            background: #fff;
+            background: $clw;
             position: absolute;
             left: 0;
             bottom: -18px;
@@ -39,9 +39,8 @@
         }
     }
     a {
-        color: #fff;
+        color: $clw;
     }
-
     @include sp(768px) {
         .c-list--3 {
             display: block;
@@ -67,11 +66,11 @@
             &::after {
                 border-left: 10px solid transparent;
                 border-right: 10px solid transparent;
-                border-top: 10px solid #6b2800;
+                border-top: 10px solid $cl01;
                 bottom: -10px;
             }
             &::first-letter {
-                color: #f0b000;
+                color: $cl04;
                 font-size: 32px;
             }
         }
@@ -94,12 +93,12 @@
                     padding-top: 12px;
                     position: relative;
                 }
-                > svg {
+                >svg {
                     position: absolute;
                     top: 2px;
                     left: 50%;
                     transform: scale(1) translate(-50%, -5px) rotate(-90deg);
-                    color: #f0b000;
+                    color: $cl04;
                 }
             }
         }
@@ -112,7 +111,7 @@
             content: "";
             width: 30px;
             height: 2px;
-            background: #fff;
+            background: $clw;
             position: absolute;
             left: 0;
             bottom: -18px;
@@ -137,7 +136,7 @@
     }
     .coppy {
         margin-top: 50px;
-        background: #6b2800;
+        background: $cl01;
         padding: 20px;
         text-align: center;
         @include sp(768px) {
@@ -147,10 +146,19 @@
         p {
             font-size: 1.3rem;
             font-weight: 600;
-            color: #fff;
+            color: $clw;
+            margin-bottom: 0;
             @include sp(768px) {
                 font-size: 1.1rem;
             }
+        }
+    }
+    &.active {
+        .c-totop {
+            position: absolute;
+            bottom: auto;
+            top: -25px;
+            opacity: 1;
         }
     }
 }

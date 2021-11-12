@@ -1,4 +1,4 @@
-import React,{ useEffect } from "react";
+import React,{ useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Helmet from "./Helmet";
 import Section, { SectionTitle, SectionBody } from "../Components/Section";
@@ -15,11 +15,23 @@ import { policiesState$ } from "../redux/selectors/policiesSelectors";
 import { getProducts } from "../redux/actions/productsAction"
 import {productsState$} from "../redux/selectors/productsSelectors"
 
-import { dataMainVisual } from "../FakeData/FakaMainvisual";
+// import { dataMainVisual } from "../FakeData/FakaMainvisual";
 import FakeblogData from "../FakeData/FakeBlog";
+
+import {fetchCustomerByName} from "../api"
 
 const Home = () => { 
   const dispatch = useDispatch();
+
+  const [maivisual,setMaivisual] = useState();
+
+  useEffect(() => {
+    fetchCustomerByName("maivisual").then(data =>{   
+      setMaivisual(data.data);
+    }).catch(error =>{
+      console.log(error);
+    })    
+  }, [])
 
   useEffect(() => {    
     dispatch(getPolicies.getPoliciesReq());
@@ -38,12 +50,12 @@ const Home = () => {
     return products.slice(start, start + count);
   }; 
   
-  
+    
   return (
     <Helmet title="Trang chủ">
       <div className="p-top">
         {/** Hero MainVisual */}
-        <MainVisual data={dataMainVisual} />
+        <MainVisual data={maivisual} />
         {/** end MainVisual */}
 
         <div className="p-top__inner">

@@ -6,6 +6,7 @@ import socialRouter from "./routers/socialRouter.js"
 import policyRouter from "./routers/policyRouter.js"
 import productRouter from "./routers/productRouter.js"
 import sliderHeroRouter from "./routers/sliderHeroRouter.js"
+import customerRouter from './routers/customerRouter.js';
 
 const app = express()
 const PORT = process.env.port || 5000
@@ -20,6 +21,7 @@ app.use('/api/v1/social', socialRouter)
 app.use('/api/v1/policy', policyRouter)
 app.use('/api/v1/products', productRouter)
 app.use('/api/v1/hero-slider', sliderHeroRouter)
+app.use('/api/v1/customer', customerRouter)
 
 
 mongoose.connect(URI, {

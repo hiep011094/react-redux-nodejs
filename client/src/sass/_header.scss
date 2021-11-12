@@ -7,7 +7,7 @@
     top: 0;
     z-index: 100;
     padding: 10px 0;
-    color: $main-bg;
+    color: $clw;
     transition: 0.5s ease;
     .l-container {
         display: flex;
@@ -18,12 +18,12 @@
         margin-bottom: -10px;
     }
     a {
-        color: $main-bg;
+        color: $clw;
     }
 }
 
 .c-header.active {
-    background: rgba(206, 105, 47, 0.8);
+    background: $cl02-op-08;
     padding: 4px 0 3px 0;
     @include sp(768px) {
         padding: 10px 0;
@@ -42,5 +42,13 @@
     }
     .c-gnavi__sub {
         padding: 20px 0 0 0;
+        @include sp(768px) {
+            padding: 0;
+        }
+    }
+    @include sp(999px) {
+        .c-gnavi .c-gnavi__sub.active {
+            top: 37px;
+        }
     }
 }

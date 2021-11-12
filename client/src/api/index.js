@@ -10,3 +10,8 @@ export const fetchPolicies = () => axios.get(`${URL}/api/v1/policy`);
 export const fetchProducts = () => axios.get(`${URL}/api/v1/products`);
 //sliderHero
 export const fetchsliderHeros = () => axios.get(`${URL}/api/v1/hero-slider`);
+
+// customer
+export const fetchCustomers = () => axios.get(`${URL}/api/v1/customer/`);
+// customer
+export const fetchCustomerByName = (name) => axios.get(`${URL}/api/v1/customer/${name}`);

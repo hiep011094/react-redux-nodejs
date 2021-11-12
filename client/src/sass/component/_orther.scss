@@ -12,7 +12,7 @@
         font-size: 3rem;
     }
     a {
-        color: #fff;
+        color: $clw;
     }
 }
 
@@ -24,18 +24,18 @@
 }
 
 .c-hotline {
-    background: #f3e9d5;
     text-align: center;
     margin-top: 30px;
     margin: 0 auto;
+    background: $clw;
     .ttl {
         font-size: 48px;
         line-height: 1;
         font-family: "Dancing Script", cursive;
         text-transform: lowercase;
-        background: #6b2800;
+        background: $cl01;
         padding: 10px;
-        color: #fff;
+        color: $clw;
         position: relative;
         letter-spacing: 00.1em;
         &::after {
@@ -44,14 +44,14 @@
             height: 0;
             border-left: 20px solid transparent;
             border-right: 20px solid transparent;
-            border-top: 20px solid #6b2800;
+            border-top: 20px solid $cl01;
             position: absolute;
             bottom: -20px;
             left: 50%;
             transform: translateX(-50%);
         }
         &::first-letter {
-            color: #f0b000;
+            color: $cl04;
             font-size: 54px;
         }
     }
@@ -61,7 +61,7 @@
         padding: 40px 20px;
         &__item {
             a {
-                color: #6b2800;
+                color: $cl01;
                 font-size: 44px;
                 font-family: "Roboto", sans-serif;
                 font-weight: 700;
@@ -71,12 +71,12 @@
                     transform: scale(0.75);
                 }
             }
-            > svg {
+            >svg {
                 transform: scale(1.8) translateY(-5px);
-                color: #f0b000;
+                color: $cl04;
             }
             &:first-child {
-                > svg {
+                >svg {
                     display: none;
                 }
             }
@@ -85,7 +85,7 @@
 }
 
 .c-mainvisual {
-    color: #fff;
+    color: $clw;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -104,6 +104,7 @@
         }
     }
 }
+
 .c-videomv {
     position: fixed;
     left: 0;
@@ -142,7 +143,7 @@
             margin: 0 10px;
         }
         a {
-            color: #fff;
+            color: $clw;
             padding: 5px 8px;
             border-radius: 10px;
             line-height: 1;
@@ -169,14 +170,14 @@
 }
 
 .c-policycart {
-    background: #fff;
+    background: $clw;
     display: flex;
     align-items: center;
     padding: 10px 20px;
     box-shadow: $box-shadow;
     &__icon {
         font-size: 3rem;
-        color: rgb(251, 185, 107);
+        color: $cl03;
     }
     &__txt {
         margin-left: 20px;
@@ -207,7 +208,7 @@
     @include sp(374px) {
         max-width: 220px;
     }
-    * > {
+    *> {
         display: block;
         width: 100%;
     }
@@ -244,7 +245,7 @@
     }
     &__txt {
         padding: 15px 10px;
-        background: rgba(255, 255, 255, 0.233);
+        background: $clw-op-02;
         transition: 0.5s;
         &:hover {
             opacity: 0.7;
@@ -253,7 +254,7 @@
             font-size: 2rem;
             font-weight: 700;
             font-family: "Pacifico", cursive;
-            color: #6b2800;
+            color: $cl01;
             margin-bottom: 10px;
             text-align: center;
         }
@@ -277,7 +278,7 @@
                 }
             }
             &_news {
-                color: #f0b000;
+                color: $cl04;
                 font-size: 1.8rem;
             }
             &_old {
@@ -287,7 +288,7 @@
                     content: "";
                     width: 100%;
                     height: 2px;
-                    background: #333;
+                    background: $clbl;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
@@ -308,9 +309,9 @@
         margin: 0 auto;
         padding: 60px 30px 30px 30px;
         width: 95%;
-        background: rgba(255, 255, 255, 0.8);
+        background: $clw-op-08;
         transform: translateY(-35px);
-        box-shadow: 0px 1px 20px #33333333;
+        box-shadow: $box-shadow;
         position: relative;
         transition: 0.5s;
         min-height: 242px;
@@ -319,12 +320,12 @@
             min-height: auto;
         }
         .cate {
-            background: #dd9f05;
-            color: #fff;
+            background: $cl04;
+            color: $clw;
             padding: 5px 15px;
             font-size: 1.3rem;
             font-weight: 600;
-            text-shadow: 0 0 1px #fff;
+            text-shadow: 0 0 1px $clw;
             letter-spacing: 0.1em;
             display: inline-block;
             position: absolute;
@@ -339,7 +340,7 @@
             text-align: center;
             font-size: 2.6rem;
             font-family: "Pacifico", cursive;
-            color: #6b2800;
+            color: $cl01;
             line-height: 1.4;
             @include sp(768px) {
                 font-size: 2rem;

@@ -1,7 +1,7 @@
 .c-btn01 {
     min-width: 300px;
-    background: #6b2800;
-    color: #fff;
+    background: $cl01;
+    color: $clw;
     display: inline-block;
     font-size: 2.4rem;
     font-family: "Dancing Script", cursive;
@@ -36,8 +36,8 @@
     display: block;
     min-width: 160px;
     border: none;
-    background: rgba(206, 105, 47, 0.8);
-    color: #fff;
+    background: $cl02-op-08;
+    color: $clw;
     font-size: 1.6rem;
     font-family: "Dancing Script", cursive;
     border-radius: 10px;
@@ -53,7 +53,7 @@
     }
     &::before {
         content: "";
-        background: rgba(206, 105, 47, 0.4);
+        background: $cl02-op-04;
         transition: 0.5s;
         width: 50%;
         height: 100%;
@@ -64,7 +64,7 @@
     }
     &::after {
         content: "";
-        background: rgba(206, 105, 47, 0.4);
+        background: $cl02-op-04;
         transition: 0.5s;
         width: 50%;
         height: 100%;
@@ -79,6 +79,37 @@
         }
         &::after {
             right: -50%;
+        }
+    }
+}
+
+.c-totop {
+    position: fixed;
+    right: 60px;
+    bottom: 60px;
+    z-index: 10;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 1.8rem;
+    color: $clw;
+    background: $cl01;
+    cursor: pointer;
+    transition: 0.5s;
+    transform: translateY(120px);
+    border: 2px solid $clw;
+    @include sp(768px) {
+        width: 40px;
+        height: 40px;
+        font-size: 1.4rem;
+        right: 30px;
+        bottom: 30px;
+    }
+    &.active {
+        transform: translateY(0);
+        &:hover {
+            transform: translateY(-10px);
         }
     }
 }
